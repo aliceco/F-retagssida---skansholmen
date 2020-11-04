@@ -1,0 +1,58 @@
+*{
+    margin: 0; 
+    padding: 0; 
+}
+
+.nav-mobile {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3vw;
+    padding: 2vw;
+}
+
+.open-btn {
+    padding: 0.4rem; 
+
+}
+
+.sidepanel {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1;
+    background: black;
+}
+
+.welcome-text {
+    margin: 30px; 
+}
+
+
+/* mobiltelefon */
+@media screen and (min-with: 320px) {
+    .nav-mobile {
+        display: flex;
+    }
+    .nav-full {
+        display: hidden;
+    }
+
+/* ipad */
+@media (min-with: 600px) {
+
+}
+
+/* desktop */
+@media (min-with: 980px) {
+
+    .burger-menu-button {
+        display: hidden;
+    }
+
+    .horizantal-menu {
+        display: block;
+    }
+
+}

@@ -8,9 +8,35 @@
     <title>Skansholmen - Hem</title>
 </head>
 
+<script>
+    function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+    }
+
+</script>
+
 <body>
+
     <header>
-        <nav class="nav-full-screen">
+
+        <nav class="nav-mobile">
+            <h1>Skansholmen</h1>
+            <button class="open-btn" onclick="openNav()">☰</button>
+            <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="">Hem</a>
+                <a href="">Bistro</a>
+                <a href="">Glassbuffé</a>
+                <a href="">Camping</a>
+                <a href="">Gästhamn</a>
+                <a href="">Kontakt </a>
+            </div>
+        </nav>  
+        <nav class="nav-full">
             <h1>Skansholmen</h1>
             <a href="">Hem</a>
             <a href="">Bistro</a>
@@ -19,33 +45,36 @@
             <a href="">Gästhamn</a>
             <a href="">Kontakt </a>
         </nav>
-        <nav class="nav-mobile">
-            <h1>Skansholmen</h1>
-            <p>☰</p>
-        </nav>
         <div class="slide-show">
         </div>
     </header>
     <main>
-        <h1>Välkommen till Skansholmen</h1>
-        <p>Mitt i det sörmländska landskapet där slott och herrgårdar varvas med röda stugor hittar du Mörkö, den gröna
-            sagoön.
-            På Mörkös norra sida strax intill Skanssundets färjeläge ligger Skansholmen. Där finner du restaurang, affär
-            & kiosk , café och glassbuffé, camping, gästhamn, en Pelle P butik och en kontokorts mack.
-            Från 1950 talet har området varit camping. 1994 byggdes Skansholmens Sjökrog, bensinstationen och
-            kiosk/affären, man köpte då in bryggor och anlade brygganläggningen med gästhamn. Från maj till september
-            serveras här förstklassig mat i genuin skärgårdsmiljö med sjöutsikt åt alla väderstreck.
-            Vi erbjuder en skärgårdsupplevelse för alla, nära både Södertälje, Trosa, Nynäshamn och Stockholm.
-            Kom vandrande på Sörmlandsleden eller med bil, MC, båt, cykel, kanot eller varför inte en SUP.
-            Bistron är belägen i västerläge med fantasisk kvällssol och med utsikt över Skanssundet och farleden in till
-            Södertälje.
-            Under en del sommarkvällar kommer vi ha musikuppträdanden – se under Event vilka artister vi har denna
-            säsong.
-            Sov över i en liten stuga, i vårt fräsha vandrarhem eller i din båt, husbil eller husvagn.
-            Det finns en P-plats ca 100 meter bort där man kan parkera sin bil för 15:- i timmen.
-            Vi i personalteamet på Skansholmen kommer göra vårt yttersta för att skapa och ge dig som gäst en vänlig och
-            total upplevelse.
-        </p>
+        <div class="welcome-text">
+            <h1>Välkommen till Skansholmen</h1>
+            <p>Mitt i det sörmländska landskapet där slott och herrgårdar varvas med röda stugor hittar du Mörkö, den
+                gröna
+                sagoön.
+                På Mörkös norra sida strax intill Skanssundets färjeläge ligger Skansholmen. Där finner du restaurang,
+                affär
+                & kiosk , café och glassbuffé, camping, gästhamn, en Pelle P butik och en kontokorts mack.
+                Från 1950 talet har området varit camping. 1994 byggdes Skansholmens Sjökrog, bensinstationen och
+                kiosk/affären, man köpte då in bryggor och anlade brygganläggningen med gästhamn. Från maj till
+                september
+                serveras här förstklassig mat i genuin skärgårdsmiljö med sjöutsikt åt alla väderstreck.
+                Vi erbjuder en skärgårdsupplevelse för alla, nära både Södertälje, Trosa, Nynäshamn och Stockholm.
+                Kom vandrande på Sörmlandsleden eller med bil, MC, båt, cykel, kanot eller varför inte en SUP.
+                Bistron är belägen i västerläge med fantasisk kvällssol och med utsikt över Skanssundet och farleden in
+                till
+                Södertälje.
+                Under en del sommarkvällar kommer vi ha musikuppträdanden – se under Event vilka artister vi har denna
+                säsong.
+                Sov över i en liten stuga, i vårt fräsha vandrarhem eller i din båt, husbil eller husvagn.
+                Det finns en P-plats ca 100 meter bort där man kan parkera sin bil för 15:- i timmen.
+                Vi i personalteamet på Skansholmen kommer göra vårt yttersta för att skapa och ge dig som gäst en vänlig
+                och
+                total upplevelse.
+            </p>
+        </div>
         <h3>Välkommen!</h3>
         <div>
             <h2>Äta</h2>
@@ -64,7 +93,7 @@
         <div>
             <p>Övrig information</p>
         </div>
-        <div class="map  ">
+        <div class="map ">
         </div>
     </aside>
     <footer>

@@ -3,56 +3,101 @@
     padding: 0; 
 }
 
+/*Navigation*/
 .nav-mobile {
     display: flex;
     justify-content: space-between;
-    margin-top: 3vw;
+    margin-top: 4vw;
     padding: 2vw;
 }
 
-.open-btn {
-    padding: 0.4rem; 
+.nav-mobile h1 {
+    padding-left: 5vw;
+    padding-top: 2vw;
+    font-size: 2.5rem;
+}
 
+.open-btn {
+    padding: 0.6rem;
+    margin-right: 4vw; 
+    margin-top: 2vw;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: white;
 }
 
 .sidepanel {
-    display: flex;
+    height: 100%;
+    width: 0;
     position: fixed;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
     z-index: 1;
-    background: black;
+    top: 0;
+    right: 0;
+    background-color: grey;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 6vw;
+  }
+
+  .sidepanel a {
+    padding: 1rem 0 1rem 3rem;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidepanel .closebtn {
+    position: absolute;
+    top: 1vw;
+    right: 3vw;
+    font-size: 2rem;
+    margin-left: 50px;
+}
+
+/*Main*/
+.grid-box {
+    display: grid;
+}
+/*Slide show*/
+.slide-show {
+    max-width: 100%;
+    height: auto;
 }
 
 .welcome-text {
     margin: 30px; 
 }
 
-
 /* mobiltelefon */
-@media screen and (min-with: 320px) {
+@media (min-width: 320px) {
     .nav-mobile {
         display: flex;
     }
     .nav-full {
-        display: hidden;
+        display: none;
     }
+}
 
 /* ipad */
-@media (min-with: 600px) {
+@media (min-width: 600px) {
 
 }
 
 /* desktop */
-@media (min-with: 980px) {
+@media (min-width: 980px) {
 
-    .burger-menu-button {
-        display: hidden;
+    .nav-mobile{
+        display: none;
     }
 
-    .horizantal-menu {
+    .nav-full{
         display: block;
     }
-
+    .slide-show {
+        max-height: 200px;
+    }
 }

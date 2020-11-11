@@ -3,15 +3,27 @@
     padding: 0; 
 }
 
+.text-styling {
+    text-align: center;
+    margin: 12vw 12vw 3vw 12vw;
+}
+
+.margin-bottom {
+    margin-bottom: 8vw;
+}
+
+.text-separate {
+    margin-bottom: 3vw;
+}
 /*Navigation*/
-.nav-mobile {
+#nav-mobile {
     display: flex;
     justify-content: space-between;
     margin-top: 4vw;
     padding: 2vw;
 }
 
-.nav-mobile h1 {
+#nav-mobile h1 {
     padding-left: 5vw;
     padding-top: 2vw;
     font-size: 2.5rem;
@@ -35,7 +47,7 @@
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: grey;
+    background-color: #e1f1ff;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 6vw;
@@ -58,37 +70,48 @@
     margin-left: 50px;
 }
 
-.nav-full {
+#nav-full {
     display: none; 
 }
-
-
-/*Slide show*/
-.slide-show {
-    max-width: 100%;
-    height: auto;
-}
-
 
 /* content gird */
 .grid-container , .grid-container2 {
     display: block;
 }
 
+/*Slide show*/
+
+#cover {    
+    max-width: 800px;
+}
+
+
 /* content design */
-.welcome-text {
-    margin: 30px; 
+#opening-hours {
+    background: #e1f1ff;
+    padding: 3vw;
 }
 
-aside {
-    margin: 30px;
-    text-align: center;
-}
-article {
-    margin: 30px;
-    text-align: center;
+#reception-open , #ice-cream-open , #bistro-open {
+    margin: 2vw 0 4vw 0;
 }
 
+.thumbnails {
+    max-width: 480px;
+    margin-top: 5vw;
+}
+
+.position-realtive {
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    bottom: 0.9vw;
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.466);
+}
 
 /* footer */
 footer{
@@ -98,17 +121,47 @@ footer{
 /* ipad */
 @media (min-width: 600px) {
 
+    .grid-container2 {
+        display: grid;
+    }
+    .thumbnails {
+        max-width: 200px;
+    }
 }
 
 /* desktop */
 @media (min-width: 980px) {
 
-    .nav-mobile{
+    #nav-mobile{
         display: none;
     }
 
-    .nav-full{
-        display: block;
+    #nav-full{
+        display: grid;
+        grid-template-columns: 7fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        margin: 1vw;
+        padding: 2vw;
+    }
+    #nav-full h1 {
+        font-size: 2rem;
+    }
+    #nav-full a{
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+        align-self: center;
+    }
+    #nav-full a:hover {
+        color: gray;
+    }
+
+    .text-styling {
+        text-align: center;
+        margin: 0 ;
+    }
+
+    .margin-bottom {
+        margin-bottom: 0;
     }
     .slide-show {
         max-height: 200px;
@@ -116,10 +169,37 @@ footer{
     .grid-container {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;    
+        grid-template-rows: 30% 1fr 1fr;    
     }
+
+    #welcome-text {
+        align-self: center;
+    }
+    #welcome-text p {
+        margin: 3vw;
+        line-height: 1.6rem;
+        text-align: justify;
+    }
+
+    #opening-hours {
+        align-self: center;
+    }
+
+    #information {
+        align-self: center;
+    }
+
+    #marina {
+        align-self: center;
+    }
+
+
 
     .grid-container2 {
         display: grid;
+    }
+
+    #cover{
+        max-width: 100%;
     }
 }

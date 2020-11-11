@@ -21,23 +21,23 @@
 
 <body>
     <header>
-        <nav class="nav-mobile">
+        <nav id="nav-mobile">
             <h1>Skansholmen</h1>
             <button class="open-btn" onclick="openNav()">☰</button>
             <div id="mySidepanel" class="sidepanel">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
-                <a href="">Hem</a>
-                <a href="">Bistro</a>
+                <a href="index.html">Hem</a>
+                <a href="bistro.html">Bistro</a>
                 <a href="">Glassbuffé</a>
                 <a href="">Camping</a>
                 <a href="">Gästhamn</a>
                 <a href="">Kontakt </a>
             </div>
         </nav>
-        <nav class="nav-full">
+        <nav id="nav-full">
             <h1>Skansholmen</h1>
-            <a href="">Hem</a>
-            <a href="">Bistro</a>
+            <a href="index.html">Hem</a>
+            <a href="bistro.html">Bistro</a>
             <a href="">Glassbuffé</a>
             <a href="">Camping</a>
             <a href="">Gästhamn</a>
@@ -46,10 +46,12 @@
         <div class="slide-show">
         </div>
     </header>
-    <div class="grid-container">
-        <main>
-            <div class="welcome-text">
-                <h1>Välkommen till Skansholmen</h1>
+
+    <img id="cover" src="./photos/skansholmen20-5.jpg" alt="" width="100%">
+
+    <div class="grid-container text-styling">
+            <div id="welcome-text" class="margin-bottom">
+                <h1 class="text-separate">Välkommen till Skansholmen</h1>
                 <p>Mitt i det sörmländska landskapet där slott och herrgårdar varvas med röda stugor hittar du Mörkö,
                     den
                     gröna
@@ -80,47 +82,64 @@
                 </p>
                 <h3>Välkommen!</h3>
             </div>
-        </main>
-        <aside>
-            <div class="opening-hours">
-                <h2>Öppettider</h2>
+        <aside id="opening-hours" class="margin-bottom">
+            <h2>Öppettider</h2>
+            <div id="reception-open">
                 <p>Reception</p>
                 <p>mån-fre: 09.00 - 20.00</p>
                 <p>lördag: 09.00 - 21.00</p>
                 <p>söndag: 08.00 - 21.00</p>
             </div>
+            <div id="ice-cream-opening">
+                <p>Glassbuffé</p>
+                <p>mån-fre: 09.00 - 20.00</p>
+                <p>lördag: 09.00 - 21.00</p>
+                <p>söndag: 08.00 - 21.00</p>
+            </div>
+            <div id="bistro-open">
+                <p>Bistro</p>
+                <p>mån-fre: 09.00 - 20.00</p>
+                <p>lördag: 09.00 - 21.00</p>
+                <p>söndag: 08.00 - 21.00</p>
+            </div>
         </aside>
-        <article class="grid-container2">
+        <article class="grid-container2 margin-bottom">
             <div class="eat">
                 <h2>Äta</h2>
-                <div class="bistro">
-                    <p>Bistro</p>
-                </div>
-                <div class="ice-cream">
-                    <p>Glassbuffé</p>
-                </div>
+                <div class="bistro position-realtive">
+                    <a href="bistro.html">
+                        <img class="thumbnails" src="./photos/bistro.jpg" alt="" width="100%">
+                        <p class="title">Bistro</p>
+                    </a>
+                    </div>
+                    <div class="ice-cream position-realtive">
+                        <img class="thumbnails" src="./photos/glass.jpg" alt="" width="100%">
+                        <p class="title">Glassbuffé</p>
+                    </div>
             </div>
             <div class="living">
                 <h2>Boende</h2>
-                <div class="hostel">
-                    <p>Vandrarhem</p>
+                <div class="hostel position-realtive">
+                    <img class="thumbnails" src="./photos/vandrarhem.webp" alt="" width="100%">
+                    <p class="title">Vandrarhem</p>
                 </div>
-                <div class="cottage">
-                    <p>stugor</p>
+                <div class="cottage position-realtive">
+                    <img class="thumbnails" src="./photos/stugor.webp" alt="" width="100%">
+                    <p class="title">stugor</p>
                 </div>
             </div>
         </article>
-        <aside>
-            <div class="information">
-                <h2>Övrig information</h2>
+        <aside class="margin-bottom">
+            <div id="information">
+                <h2 class="text-separate">Övrig information</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium natus nobis ipsam rem earum
                     facilis modi, illo quas quos id placeat, maxime architecto eaque quibusdam totam ratione ab eius
                     esse?</p>
             </div>
         </aside>
-        <article>
-            <div class="marina">
-                <h2>Gärthamn</h2>
+        <article class="margin-bottom">
+            <div id="marina">
+                <h2 class="text-separate">Gärthamn</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur deserunt exercitationem
                     distinctio sunt tenetur illum nihil iste totam ut expedita necessitatibus dolor, voluptatibus alias
                     omnis blanditiis quod commodi rem. Temporibus sapiente beatae cumque architecto impedit sunt sint!
@@ -128,12 +147,12 @@
             </div>
         </article>
         <aside>
-            <div class="map ">
+            <div class="map margin-bottom">
                 <h2>map</h2>
             </div>
         </aside>
     </div>
-    <footer>
+    <footer class="text-styling">
         <p>Skansholmens Fritid AB</p>
     </footer>
 </body>

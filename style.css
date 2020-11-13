@@ -97,7 +97,7 @@
 }
 
 .thumbnails {
-    max-width: 480px;
+    max-width: 80vw;
     margin-top: 5vw;
 }
 
@@ -168,8 +168,8 @@ footer{
     }
     .grid-container {
         display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: 30% 1fr 1fr;    
+        grid-template-columns: 68vw 1fr;
+        grid-template-rows: 60vh 1fr 1fr;    
     }
 
     #welcome-text {
@@ -193,13 +193,48 @@ footer{
         align-self: center;
     }
 
-
-
     .grid-container2 {
         display: grid;
+        grid-template-columns: repeat(13, 5vw);
+        grid-template-rows: 3vh 6vh 1fr 3vh 6vh 1fr 8vh;
+    }
+    #eat {
+        grid-column: 1 / -1;
+        grid-row-start: 2;
+    }
+    #bistro {
+        grid-column: 3 / 7;
+        grid-row-start: 3;
     }
 
-    #cover{
+    #ice-cream {
+        grid-column: 8 / 12;
+        grid-row-start: 3;
+    }
+
+    #live {
+        grid-column: 1 / -1;
+        grid-row-start: 5;
+    }
+
+    #hostel {
+        grid-column: 3/ 7;
+        grid-row-start: 6;
+    }
+
+    #cottage {
+        grid-column: 8 / 12;
+        grid-row-start: 6;
+    }
+
+    .thumbnails {
         max-width: 100%;
+        margin: 0;
+        height: 15vw;
+    }
+  
+    
+    #cover{
+        display: none ;
     }
 }

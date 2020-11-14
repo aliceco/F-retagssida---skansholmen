@@ -114,7 +114,7 @@
 }
 
 .thumbnails {
-  max-width: 80vw;
+  max-width: 100%;
   margin-top: 5vw;
 }
 
@@ -124,10 +124,17 @@
 
 .title {
   position: absolute;
-  bottom: 0.9vw;
-  font-size: 1.2rem;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.5rem;
   color: white;
-  background-color: rgba(0, 0, 0, 0.466);
+  background-color: rgba(0, 0, 0, 0.589);
+  margin-bottom: 1vh;
+  padding: 1vh 0 1vh 0;
+}
+
+.title:hover {
+  background-color: rgb(0, 0, 0);
 }
 
 #map {
@@ -157,9 +164,68 @@ footer {
 @media (min-width: 600px) {
   .grid-container2 {
     display: grid;
+    grid-template-columns: repeat(19, 4vw);
+    grid-template-rows: 3vh 6vh 1fr 3vh 6vh 1fr 3vh;
   }
-  .thumbnails {
-    max-width: 200px;
+  #eat {
+    font-size: 2rem;
+    grid-column: 1 / -1;
+    grid-row-start: 2;
+    align-self: center;
+  }
+  #bistro {
+    grid-column: 1 / 9;
+    grid-row-start: 3;
+  }
+
+  #ice-cream {
+    grid-column: 12 / 20;
+    grid-row-start: 3;
+  }
+
+  #live {
+    font-size: 2rem;
+    grid-column: 1 / -1;
+    grid-row-start: 5;
+    align-self: center;
+  }
+
+  #hostel {
+    grid-column: 1/ 9;
+    grid-row-start: 6;
+  }
+
+  #cottage {
+    grid-column: 12 / 20;
+    grid-row-start: 6;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 4vh;
+    text-align: none;
+  }
+
+  #copyright {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    align-self: center;
+  }
+
+  #contact {
+    grid-column-start: 2;
+    align-self: center;
+  }
+
+  #adress {
+    grid-column-start: 3;
+    align-self: center;
+  }
+  #socaials {
+    grid-column-start: 4;
+    align-self: center;
   }
 }
 
@@ -167,6 +233,11 @@ footer {
 @media (min-width: 980px) {
   .dropshadow {
     filter: drop-shadow(0.5vw 0.5vw 0.5vw hsla(0, 0%, 0%, 0.56));
+  }
+
+  .content-styling {
+    text-align: center;
+    margin: 0;
   }
 
   .margin-bottom {
@@ -201,21 +272,10 @@ footer {
     color: gray;
   }
 
-  .content-styling {
-    text-align: center;
-    margin: 0;
-  }
-
-  .margin-bottom {
-    margin-bottom: 0;
-  }
-  .slide-show {
-    max-height: 200px;
-  }
   .grid-container {
     display: grid;
     grid-template-columns: 68vw 1fr 3vw;
-    grid-template-rows: 3vh 60vh 1fr 1fr 3vh;
+    grid-template-rows: 3vh 60vh 3vh 20vh 1fr 3vh 20vh 1fr 3vh;
     column-gap: 3vw;
     row-gap: 3vh;
   }
@@ -226,7 +286,8 @@ footer {
 
   .background {
     background-image: url(./photos/cover.jpg);
-    min-height: 60vh;
+    min-height: 80vh;
+    width: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -264,54 +325,91 @@ footer {
     grid-column-start: 2;
     grid-row-start: 2;
     align-self: center;
+    background: none;
   }
 
   #information {
     grid-column-start: 2;
-    grid-row-start: 3;
+    grid-row-start: 5;
     align-self: center;
     margin-top: 10vh;
   }
 
   #marina {
     grid-column-start: 1;
-    grid-row-start: 4;
+    grid-row-start: 8;
     align-self: center;
   }
 
+  #map {
+    grid-column-start: 2;
+    grid-row-start: 8;
+  }
+
+  #breaker {
+    grid-column: 1 / -1;
+    grid-row-start: 4;
+    background: url(./photos/cover.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(50%);
+  }
+
+  #breaker2 {
+    grid-column: 1 / -1;
+    grid-row-start: 7;
+    background: url(./photos/cover.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(50%);
+  }
+
+  /* EAT/LIVING */
   .grid-container2 {
     grid-column-start: 1;
-    grid-row-start: 3;
+    grid-row-start: 5;
     display: grid;
-    grid-template-columns: repeat(13, 5vw);
+    grid-template-columns: repeat(16, 4vw);
     grid-template-rows: 8vh 6vh 1fr 3vh 6vh 1fr 8vh;
+    grid-row-gap: 1.5vh;
   }
   #eat {
+    font-size: 2rem;
     grid-column: 1 / -1;
     grid-row-start: 2;
+    align-self: start;
   }
+
   #bistro {
-    grid-column: 3 / 7;
+    grid-column: 3 / 8;
     grid-row-start: 3;
   }
 
   #ice-cream {
-    grid-column: 8 / 12;
+    grid-column: 10 / 15;
     grid-row-start: 3;
   }
 
   #live {
+    font-size: 2rem;
     grid-column: 1 / -1;
     grid-row-start: 5;
+    align-self: start;
   }
 
   #hostel {
-    grid-column: 3/ 7;
+    grid-column: 3/ 8;
     grid-row-start: 6;
   }
 
   #cottage {
-    grid-column: 8 / 12;
+    grid-column: 10 / 15;
     grid-row-start: 6;
   }
 
@@ -321,30 +419,15 @@ footer {
     height: 15vw;
   }
 
-  #map {
-    grid-column-start: 2;
-    grid-row-start: 4;
-  }
-
   footer {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 4vh;
     text-align: none;
   }
 
   #copyright {
-    grid-column-start: 1;
-    align-self: start; 
-  }
-
-  #contact {
-    grid-column-start: 2;
-  }
-
-  #adress {
-    grid-column-start: 3;
-  }
-  #socaials {
-    grid-column-start: 4;
+    font-size: 1.7rem;
   }
 }

@@ -73,8 +73,9 @@
   margin-left: 50px;
 }
 
-#nav-full {
+#nav-full ,#bistro-img-1 {
   display: none;
+  
 }
 
 /* content gird */
@@ -161,59 +162,65 @@
   background: #e1f1ff;
 }
 
-#menu1 {
+#menu-header {
   grid-column: 1 / -1;
   grid-row: 1 / 3;
+  padding-top: 2vh;
+
 }
 
-#menu2 {
+#pre-head {
   grid-column: 1 / -1;
   grid-row-start: 3;
 }
 
-#menu3 {
+#pre-menu {
   grid-column: 1 / -1;
   grid-row: 4 / 6;
   text-align: left;
   padding-left: 2vw;
 }
 
-#menu4 {
+#pre-price {
   grid-column: 13 / 15;
   grid-row: 4 / 6;
 }
 
-#menu5 {
+#main-course-head {
   grid-column: 1 / -1;
   grid-row-start: 6;
 }
 
-#menu6 {
+#main-course-menu {
   grid-column: 1 / -1;
   grid-row: 7 / 10;
   text-align: left;
   padding-left: 2vw;
 }
 
-#menu7 {
+#main-course-price {
   grid-column: 13 / 15;
   grid-row: 7 / 12;
 }
-#menu8 {
+#kid-head {
   grid-column: 1 / -1;
   grid-row-start: 12;
 }
 
-#menu9 {
+#kid-menu {
   grid-column: 1 / 13;
   grid-row: 13 / 17;
   text-align: left;
   padding-left: 2vw;
 }
 
-#menu10 {
+#kid-price {
   grid-column: 13 / 15;
   grid-row: 13 / 17;
+}
+
+#bistro-img-2 , #bistro-img-3 {
+  max-width: 100%;
 }
 
 /* footer */
@@ -306,39 +313,39 @@ footer {
 
   /* bistro page */
 
-  #menu3 {
+  #pre-menu {
     grid-column: 3 / -1;
   }
 
-  #menu4 {
+  #pre-price {
     grid-column: 11 / 15;
   }
 
-  #menu5 {
+  #main-course-head {
     grid-column: 1 / -1;
     grid-row-start: 6;
   }
 
-  #menu6 {
+  #main-course-menu {
     grid-column: 3 / -1;
   }
 
-  #menu7 {
+  #main-course-price {
     grid-column: 11 / 15;
   }
-  #menu8 {
+  #kid-head {
     grid-column: 1 / -1;
     grid-row-start: 12;
   }
 
-  #menu9 {
+  #kid-menu {
     grid-column: 3 / 13;
     grid-row: 13 / 17;
     text-align: left;
     padding-left: 2vw;
   }
 
-  #menu10 {
+  #kid-price {
     grid-column: 11 / 15;
     grid-row: 13 / 17;
   }
@@ -359,7 +366,7 @@ footer {
     margin-bottom: 0;
   }
 
-  #nav-mobile {
+  #nav-mobile , #cover , #bistro-cover-mobile{
     display: none;
   }
 
@@ -394,10 +401,6 @@ footer {
     grid-template-rows: 3vh 65vh 3vh 20vh 1fr 3vh 20vh 50vh 3vh;
     column-gap: 3vw;
     row-gap: 3vh;
-  }
-
-  #cover {
-    display: none;
   }
 
   .background {
@@ -481,10 +484,6 @@ footer {
     grid-row-start: 4;
   }
 
-  /* #marina-text {
-    margin: 0 6vw 6vw 6vw;
-  } */
-
   #marina-img {
     max-width: 35vw;
   }
@@ -494,28 +493,25 @@ footer {
     grid-row-start: 8;
   }
 
+ #breaker , #breaker2 {
+  background: url(./photos/cover.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(50%);
+ }
+
   #breaker {
     grid-column: 1 / -1;
     grid-row-start: 4;
-    background: url(./photos/cover.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(50%);
+
   }
 
   #breaker2 {
     grid-column: 1 / -1;
     grid-row-start: 7;
-    background: url(./photos/cover.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(50%);
   }
 
   /* EAT/LIVING */
@@ -567,26 +563,9 @@ footer {
     height: 15vw;
   }
 
-  #bistro-img1 {
-    display: none;
-  }
-
-  #bistro-head {
-    position: absolute;
-    top: 15%;
-    left: 30%;
-    padding: 2vw 7vw 2vw 7vw;
-    text-align: center;
-    font-size: 1.5rem;
-    letter-spacing: 0.1vw;
-    line-height: 3rem;
-    color: white;
-    background-color: #00000083;
-  }
-
   #bistro-p-open {
     position: absolute;
-    top: 38%;
+    top: 28%;
     right: 10%;
     font-size: 1.4rem;
     width: 12%;
@@ -596,27 +575,123 @@ footer {
 
   #bistro-page-text {
     position: absolute;
-    top: 40%;
+    top: 25%;
     left: 8%;
     width: 50%;
     background-color: white;
     padding: 2vw;
     font-size: 1.2rem;
+    text-align: justify;
   }
 
   #menu-container {
     display: grid;
-    grid-template-columns: 1fr 70vw 1fr;
+    grid-template-columns: repeat(33, 3vw);
     grid-template-rows: 5vh 2fr 5vh;
   }
 
   #menu {
-    grid-column-start: 2;
+    grid-column: 10 / 26;
     grid-row-start: 2;
-    grid-template-columns: repeat(12, 5vw);
-  grid-template-rows: repeat(14, 4vh);
+    grid-template-columns: repeat(16, 3vw);
+    grid-template-rows: repeat(14, 4vh);
+  }
+
+  #menu p {
+    font-size: 1.2rem;
+  }
+
+  #menu-header {
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+  }
+
+  #pre-head {
+    grid-column: 1 / -1;
+    grid-row-start: 3;
+  }
+
+  #pre-menu {
+    grid-column: 3 / -1;
+    grid-row: 4 / 6;
+    text-align: left;
+    padding-left: 0;
+  }
+
+  #pre-price {
+    grid-column: 12 / 14;
+    grid-row: 4 / 6;
+    text-align: right;
+
+  }
+
+  #main-course-head {
+    grid-column: 1 / -1;
+    grid-row-start: 6;
+  }
+
+  #main-course-menu {
+    grid-column: 3 / -1;
+    grid-row: 7 / 10;
+    text-align: left;
+    padding-left: 0;
+  }
+
+  #main-course-price {
+    grid-column: 12 / 14;
+    grid-row: 7 / 10;
+    text-align: right;
+
+  }
+  #kid-head {
+    grid-column: 1 / -1;
+    grid-row-start: 12;
   }
   
+  #kid-menu {
+    grid-column: 3 / -1;
+    grid-row: 13 / 17;
+    text-align: left;
+    padding-left: 0;
+  }
+  
+  #kid-price {
+    grid-column: 12 / 14;
+    grid-row: 13 / 17;
+    text-align: right;
+  }
+
+
+  #bistro-img {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 3vh 1fr 3vh;
+    grid-column-gap: 3vw;
+    margin-bottom: 2vh;
+  }
+  
+  #bistro-img-1 , #bistro-img-2 , #bistro-img-3 {
+    max-width: 25vw;
+    align-self: center;
+  }
+
+  #bistro-img-1 {
+    display: inline;
+    grid-column: 3;
+    grid-row-start: 2;
+  }
+
+  #bistro-img-2{
+    grid-column: 4;
+    grid-row-start: 2;
+
+  }
+
+  #bistro-img-3 {
+    grid-column: 5;
+    grid-row-start: 2;
+  }
+
   footer {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;

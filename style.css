@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', sans-serif;
-    
+  font-family: "PT Sans", sans-serif;
 }
 
 /* text styling mostly small screen */
@@ -103,7 +102,8 @@
   margin-top: 3vh;
 }
 
-#opening-hours , #bistro-p-open {
+#opening-hours,
+#bistro-p-open {
   background: #e1f1ff;
   padding: 3vw;
 }
@@ -152,13 +152,11 @@
 }
 
 /* Bistro content */
-#bistro-page {
-  display: block;
-}
+
 #menu {
   display: grid;
   grid-template-columns: repeat(15, 5vw);
-  grid-template-rows: repeat(16, 4vh) ;
+  grid-template-rows: repeat(14, 4vh);
   grid-row-gap: 2vh;
   background: #e1f1ff;
 }
@@ -203,25 +201,25 @@
 }
 #menu8 {
   grid-column: 1 / -1;
-  grid-row-start: 13;
+  grid-row-start: 12;
 }
 
 #menu9 {
   grid-column: 1 / 13;
-  grid-row: 14 / 16; 
+  grid-row: 13 / 17;
   text-align: left;
   padding-left: 2vw;
 }
 
 #menu10 {
   grid-column: 13 / 15;
-  grid-row: 14 / 16;
+  grid-row: 13 / 17;
 }
 
 /* footer */
 footer {
   padding: 4vh;
-  color:black;
+  color: black;
   text-align: justify;
   background: #e1f1ff;
 }
@@ -239,7 +237,6 @@ footer {
 
 /* ipad */
 @media (min-width: 600px) {
-
   .grid-container2 {
     display: grid;
     grid-template-columns: repeat(19, 4vw);
@@ -305,6 +302,45 @@ footer {
   #socaials {
     grid-column-start: 4;
     align-self: center;
+  }
+
+  /* bistro page */
+
+  #menu3 {
+    grid-column: 3 / -1;
+  }
+
+  #menu4 {
+    grid-column: 11 / 15;
+  }
+
+  #menu5 {
+    grid-column: 1 / -1;
+    grid-row-start: 6;
+  }
+
+  #menu6 {
+    grid-column: 3 / -1;
+  }
+
+  #menu7 {
+    grid-column: 11 / 15;
+  }
+  #menu8 {
+    grid-column: 1 / -1;
+    grid-row-start: 12;
+  }
+
+  #menu9 {
+    grid-column: 3 / 13;
+    grid-row: 13 / 17;
+    text-align: left;
+    padding-left: 2vw;
+  }
+
+  #menu10 {
+    grid-column: 11 / 15;
+    grid-row: 13 / 17;
   }
 }
 
@@ -531,24 +567,56 @@ footer {
     height: 15vw;
   }
 
-  /* bistro */
-#bistro-page{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-}
+  #bistro-img1 {
+    display: none;
+  }
 
-#bistro-w {
-  grid-row-start: 1;
-}
+  #bistro-head {
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    padding: 2vw 7vw 2vw 7vw;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.1vw;
+    line-height: 3rem;
+    color: white;
+    background-color: #00000083;
+  }
 
-#menu {
-  display: none;
-}
-#bistro-img1 {
-  display: none;
-}
+  #bistro-p-open {
+    position: absolute;
+    top: 38%;
+    right: 10%;
+    font-size: 1.4rem;
+    width: 12%;
+    height: 25vh;
+    line-height: 2rem;
+  }
 
+  #bistro-page-text {
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    width: 50%;
+    background-color: white;
+    padding: 2vw;
+    font-size: 1.2rem;
+  }
+
+  #menu-container {
+    display: grid;
+    grid-template-columns: 1fr 70vw 1fr;
+    grid-template-rows: 5vh 2fr 5vh;
+  }
+
+  #menu {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-template-columns: repeat(12, 5vw);
+  grid-template-rows: repeat(14, 4vh);
+  }
+  
   footer {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;

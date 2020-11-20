@@ -227,7 +227,7 @@
 
 /* footer */
 footer {
-  padding: 4vh;
+  padding: 1.5vh;
   color: black;
   text-align: justify;
   background: #e1f1ff;
@@ -293,6 +293,10 @@ footer {
     text-align: none;
   }
 
+  footer p {
+    font-size: 0.9rem;
+  }   
+
   #copyright {
     grid-column-start: 1;
     grid-row-start: 1;
@@ -314,6 +318,10 @@ footer {
   }
 
   /* bistro page */
+
+  #menu {
+    grid-row-gap: 3.5vh;
+  }
 
   #pre-menu {
     grid-column: 3 / -1;
@@ -408,7 +416,7 @@ footer {
   }
 
   .background {
-    background-image: url(./photos/cover.1000px.jpg);
+    background-image: url(./photos/cover-1000px.jpg);
     min-height: 80vh;
     width: 100%;
     background-attachment: fixed;
@@ -499,7 +507,7 @@ footer {
 
   #breaker,
   #breaker2 {
-    background: url(./photos/cover.1000px.jpg);
+    background: url(./photos/cover-1000px.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -702,6 +710,6 @@ footer {
   }
 
   #copyright {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 }
